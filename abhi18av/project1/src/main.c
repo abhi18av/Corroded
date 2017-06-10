@@ -31,7 +31,7 @@ main (int argc, char* argv[])
     options_parser(argc, argv, &options);
 
 
-printf("Hello, World!")
+printf("Hello, World!");
 
 #ifdef DEBUG
     fprintf(stdout, BLUE "Command line options:\n" NO_COLOR);
