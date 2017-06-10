@@ -22,20 +22,15 @@
 
 
 
-int main (int argc, char* argv[])
+int main ()
 {
 
-    /* Read command line options */
-    options_t options;
-    options_parser(argc, argv, &options);
 
 
 printf("Hello, World!\n");
 
 int i;
-double A[5] = {
-    9.0, 2.9, 3.E+25, .00007,
-};
+double A[5] = { 1,2,3,4,5 };
 // Doing some work
 for (i = 0; i < 5; ++i)
 { printf("element␣%d␣is␣%g,␣\tits␣square␣is␣%g\n",
@@ -43,15 +38,6 @@ i,
 A[i],
 A[i]*A[i]);
 }
-
-#ifdef DEBUG
-    fprintf(stdout, BLUE "Command line options:\n" NO_COLOR);
-    fprintf(stdout, BROWN "help: %d\n" NO_COLOR, options.help);
-    fprintf(stdout, BROWN "version: %d\n" NO_COLOR, options.version);
-    fprintf(stdout, BROWN "use colors: %d\n" NO_COLOR, options.use_colors);
-    fprintf(stdout, BROWN "filename: %s\n" NO_COLOR, options.file_name);
-#endif
-
 
     /* Do your magic here :) */
 
