@@ -22,7 +22,7 @@ impl Clone for __sbuf {
 #[derive(Copy)]
 #[repr(C)]
 pub struct __sFILE {
-    pub _p: *mut u8,
+    _p: *mut u8,
     pub _r: i32,
     pub _w: i32,
     pub _flags: i16,
@@ -73,6 +73,9 @@ pub unsafe extern "C" fn __sputc(mut _c: i32, mut _p: *mut __sFILE) -> i32 {
 
 fn main() {
     let ret = unsafe { _c_main() };
+
+    print!("Hello, Rust");
+
     ::std::process::exit(ret);
 }
 
