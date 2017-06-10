@@ -22,8 +22,7 @@
 
 
 
-int
-main (int argc, char* argv[])
+int main (int argc, char* argv[])
 {
 
     /* Read command line options */
@@ -31,7 +30,19 @@ main (int argc, char* argv[])
     options_parser(argc, argv, &options);
 
 
-printf("Hello, World!");
+printf("Hello, World!\n");
+
+int i;
+double A[5] = {
+    9.0, 2.9, 3.E+25, .00007,
+};
+// Doing some work
+for (i = 0; i < 5; ++i)
+{ printf("element␣%d␣is␣%g,␣\tits␣square␣is␣%g\n",
+i,
+A[i],
+A[i]*A[i]);
+}
 
 #ifdef DEBUG
     fprintf(stdout, BLUE "Command line options:\n" NO_COLOR);
