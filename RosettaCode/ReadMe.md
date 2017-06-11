@@ -1,0 +1,1 @@
+All the tasks from RosettaCode contain a `markdown` report about the corrosion process.
