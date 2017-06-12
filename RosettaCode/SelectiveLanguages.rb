@@ -66,25 +66,22 @@ cmd1 = "mkdir " + "./SelectiveLanguages/"  + fldr.split("/")[-1]
 	#puts langs
 	lang_nameS.push(langS)
 
-	
+#puts lang_nameS	
 
-#for  lang in lang_nameS
+for  lang in lang_nameS[0]
 
-#		lang_name = lang.split("/")[-1]
-#		puts lang_name
-=begin
-		if my_languages.include? lang
-			puts lang
-		x = lang.split("/")[-1]
+		lang_name = lang.split("/")[-1]
+		#puts lang_name
 
-		puts x
-=end
+		if my_languages.include? lang_name
+			puts lang, fldr
+		
 	#remove lang folder
 
-		#end
+		end
 
 
 
-	#end	
+	end	
 end
 
