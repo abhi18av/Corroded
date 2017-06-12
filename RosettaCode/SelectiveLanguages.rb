@@ -63,6 +63,8 @@ newFolder = "./SelectiveLanguages/"  + fldr.split("/")[-1]
 
 cmd1 = "mkdir " + newFolder
 #puts cmd1
+system(cmd1)
+
 
 	langS = Dir[fldr + "/*"]
 	
@@ -81,8 +83,9 @@ for  lang in lang_nameS[0]
 		
 		#copy lang folder inside the SelectiveLanguages
 		oldFolder = lang
-		cmd2 = "cp " + oldFolder + " " + newFolder
-		puts cmd2
+		cmd2 = "cp -a " + oldFolder + " " + newFolder
+		#puts cmd2
+		system(cmd2)
 
 		end
 
