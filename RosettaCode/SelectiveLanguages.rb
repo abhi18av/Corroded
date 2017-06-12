@@ -58,7 +58,10 @@ for fldr in folders
 lang_nameS = []
 #move inside every folder
 
-cmd1 = "mkdir " + "./SelectiveLanguages/"  + fldr.split("/")[-1]
+newFolder = "./SelectiveLanguages/"  + fldr.split("/")[-1]
+
+
+cmd1 = "mkdir " + newFolder
 #puts cmd1
 
 	langS = Dir[fldr + "/*"]
@@ -74,9 +77,12 @@ for  lang in lang_nameS[0]
 		#puts lang_name
 
 		if my_languages.include? lang_name
-			puts lang, fldr
+			#puts lang 
 		
-	#remove lang folder
+		#copy lang folder inside the SelectiveLanguages
+		oldFolder = lang
+		cmd2 = "cp " + oldFolder + " " + newFolder
+		puts cmd2
 
 		end
 
